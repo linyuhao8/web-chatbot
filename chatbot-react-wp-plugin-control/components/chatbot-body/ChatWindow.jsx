@@ -541,7 +541,7 @@ const ChatWindow = ({ isOpen, setIsOpen }) => {
       {/* 聊天視窗 */}
       {isOpen && (
         <div className="chat-window">
-          <ChatHeader setIsOpen={setIsOpen} />
+          <ChatHeader setIsOpen={setIsOpen} siteUrl={siteUrl} />
 
           <ChatMessage
             messages={messages}
