@@ -1,0 +1,59 @@
+.chat-promotion-list {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* space-y-3 */
+}
+
+.chat-promotion-list .promotion-card {
+  border-radius: 8px;
+  padding: 16px;
+  color: #6b7280; /* text-gray-500 */
+  position: relative;
+  overflow: hidden;
+}
+
+.chat-promotion-list .promotion-content {
+  position: relative;
+  z-index: 10;
+}
+
+.chat-promotion-list .promotion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.chat-promotion-list .promotion-title {
+  font-weight: bold;
+  font-size: 14px; /* text-sm */
+}
+
+.chat-promotion-list .promotion-discount {
+  font-weight: bold;
+  font-size: 18px; /* text-lg */
+  color: #374151; /* text-gray-700 */
+}
+
+.chat-promotion-list .promotion-description {
+  font-size: 12px; /* text-xs */
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.chat-promotion-list .promotion-code {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.chat-promotion-list .promotion-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(16px, -4px);
+}

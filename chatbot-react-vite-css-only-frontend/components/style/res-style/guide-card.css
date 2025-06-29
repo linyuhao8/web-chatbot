@@ -1,0 +1,72 @@
+.chat-guide-cards-wrapper {
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-guide-cards-wrapper .guide-card {
+  background-color: white;
+  border: 1px solid #f3f4f6; /* gray-100 */
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.chat-guide-cards-wrapper .guide-card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.chat-guide-cards-wrapper .guide-icon {
+  font-size: 24px;
+}
+
+.chat-guide-cards-wrapper .guide-content {
+  flex: 1;
+}
+
+.chat-guide-cards-wrapper .guide-title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 8px;
+}
+
+.chat-guide-cards-wrapper .guide-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chat-guide-cards-wrapper .guide-item {
+  font-size: 12px;
+  color: #4b5563; /* text-gray-600 */
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chat-guide-cards-wrapper .guide-bullet {
+  color: #bbd2e4;
+}
+
+.chat-guide-cards-wrapper .guide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #2563eb; /* text-blue-600 */
+  margin-top: 8px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.chat-guide-cards-wrapper .guide-link:hover {
+  color: #1e40af; /* text-blue-800 */
+}
+
+.chat-guide-cards-wrapper .guide-link-icon {
+  width: 12px;
+  height: 12px;
+}

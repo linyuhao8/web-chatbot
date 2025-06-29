@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-1ycn6Ica999v58aD4fzVpj0IWh6IpRuhTczWpYkN1zHxFkk4h8G1ZJwYtYFv7W2ubrg9bi8XQ1kJc9xN7E+a0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    .sticky-side-social-bar {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 8px;
+    }
+
+    .sticky-side-social-bar a,
+    .sticky-side-social-bar button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .sticky-side-social-bar img {
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+  </style>
+  <body style="background-color: black;height: 200vh;">
+    <div class="sticky-side-social-bar">
+      <!-- LINE：跳轉連結 -->
+      <a href="https://line.me/R/ti/p/@521impcg" target="_blank" aria-label="LINE">
+        <img
+          src="https://museearts.com/wp-content/uploads/2025/06/LINE.png"
+          alt="LINE"
+        />
+      </a>
+
+      <!-- 電話：點擊複製 -->
+      <button onclick="copyText('0983300459', '電話')" aria-label="電話">
+        <img
+          src="https://museearts.com/wp-content/uploads/2025/06/Phone.png"
+          alt="Phone"
+        />
+      </button>
+
+      <!-- 信箱：點擊複製 -->
+      <button
+        onclick="copyText('museeartstaiwan@gmail.com', '信箱')"
+        aria-label="信箱"
+      >
+        <img
+          src="https://museearts.com/wp-content/uploads/2025/06/Email.png"
+          alt="Email"
+        />
+      </button>
+
+    <script>
+      function copyText(text, label) {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        alert(`已複製${label}: ${text}`);
+
+        const event = new CustomEvent("copyButtonClick", {
+          detail: { platform: label },
+        });
+        window.dispatchEvent(event);
+      }
+    </script>
+  </body>
+</html>

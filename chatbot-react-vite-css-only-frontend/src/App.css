@@ -1,0 +1,15 @@
+.chat-window h1,
+.chat-window h2,
+.chat-window h3,
+.chat-window h4,
+.chat-window h5,
+.chat-window h6,
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.chat-window a {
+  color: inherit;
+  text-decoration: none;
+}

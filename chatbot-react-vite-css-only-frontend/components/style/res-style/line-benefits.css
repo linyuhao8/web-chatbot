@@ -1,0 +1,72 @@
+.chat-line-benefits-card {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #f3f4f6;
+  padding: 16px;
+  margin: 8px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.chat-line-benefits-card .line-benefits-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 12px;
+}
+
+.chat-line-benefits-card .line-benefits-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .chat-line-benefits-card .line-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.chat-line-benefits-card .benefits-ul {
+  margin-bottom: 16px;
+}
+
+.chat-line-benefits-card .benefits-li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+.chat-line-benefits-card .benefits-check {
+  color: #10b981;
+}
+
+.chat-line-benefits-card .line-id-box {
+  background-color: #ecfdf5;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #f3f4f6;
+}
+
+.chat-line-benefits-card .line-id-label {
+  font-size: 14px;
+  color: #065f46;
+  margin-bottom: 4px;
+}
+
+.chat-line-benefits-card .line-id-value {
+  font-family: monospace;
+  font-weight: bold;
+  color: #047857;
+}
+
+.chat-line-benefits-card .line-qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-line-benefits-card .line-qr-text {
+  font-size: 12px;
+  color: #4b5563;
+  text-align: center;
+}
