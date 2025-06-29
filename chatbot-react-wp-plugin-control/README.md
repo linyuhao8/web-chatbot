@@ -5,7 +5,11 @@
 外部有其他部分是NEXTJS和React+Vite的專案結構。
 ---
 
-[聊天流程可透過 Wordpress 後台使用 JSON 設定](./github-public/wp-setting-page-preview.png)
+![聊天流程可透過 Wordpress 後台使用 JSON 設定](./github-public/wp-setting-page-preview.png)
+![操作](../imgs/preview-feature.gif)
+![商品顯示](../imgs/chat-bot-ui1.png)
+![優惠](../imgs/chat-bot-ui3.png)
+其他有使用 NEXTJS 和 REACT+ VITE 的專案在此專案都跟資料夾
 
 ## 🔧 開發與打包
 
