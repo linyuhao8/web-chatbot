@@ -1,0 +1,91 @@
+.chat-contact-methods-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #f3f4f6; /* gray-100 */
+  padding: 1rem;
+  margin: 0.5rem 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+
+.chat-contact-methods-card .contact-methods-title {
+  font-weight: 600;
+  color: #1f2937; /* text-gray-800 */
+  margin-bottom: 0.75rem;
+}
+
+.chat-contact-methods-card .contact-methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.chat-contact-methods-card .contact-method-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border: 1px solid #f3f4f6; /* gray-100 */
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+.chat-contact-methods-card .contact-method-item:hover {
+  background-color: #f9fafb; /* gray-50 */
+}
+
+.chat-contact-methods-card .contact-method-header {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: flex-start;
+}
+
+.chat-contact-methods-card .contact-method-icon {
+  width: 1rem;
+  height: 1rem;
+  font-size: 1.125rem; /* text-lg */
+}
+
+.chat-contact-methods-card .contact-method-name {
+  font-weight: 500;
+  font-size: 0.875rem; /* text-sm */
+  color: #1f2937; /* text-gray-800 */
+}
+
+.chat-contact-methods-card .contact-method-desc {
+  font-size: 0.75rem;
+  color: #4b5563; /* text-gray-600 */
+}
+
+.chat-contact-methods-card .contact-method-info {
+  font-size: 0.875rem;
+  font-family: monospace;
+  color: #2563eb; /* blue-600 */
+}
+
+.chat-contact-methods-card .contact-social-section {
+  border-top: 1px solid #f3f4f6;
+  padding-top: 0.75rem;
+}
+
+.chat-contact-methods-card .contact-social-title {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.chat-contact-methods-card .contact-social-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chat-contact-methods-card .contact-social-link {
+  color: black;
+  font-size: 1.25rem; /* text-xl */
+  transition: transform 0.2s ease;
+}
+.chat-contact-methods-card .contact-social-link:hover {
+  transform: scale(1.1);
+}
