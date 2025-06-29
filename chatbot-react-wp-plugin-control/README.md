@@ -1,9 +1,11 @@
 ---
 # 🐾 Chat Widget Plugin
 
-這是一個使用 **React + Vite** 開發的 WordPress 聊天外掛，用來建立互動式導購或客服聊天機器人。內容支援商品卡片、優惠訊息、LINE 加好友等多種行為，並可由 WordPress 後台以 JSON 設定。
+這是一個使用 React + Vite 開發的 WordPress 聊天外掛，用來建立互動式導購或客服聊天機器人。內容支援商品卡片、優惠訊息、LINE 加好友等多種行為，並可由 WordPress 後台以 JSON 設定。
 外部有其他部分是NEXTJS和React+Vite的專案結構。
 ---
+
+[聊天流程可透過 Wordpress 後台使用 JSON 設定](./github-public/wp-setting-page-preview.png)
 
 ## 🔧 開發與打包
 
@@ -25,6 +27,7 @@ npm run build       # 打包至 build/ 資料夾
    - `include/` 資料夾
    - `admin/` 資料夾
    - `build/` 資料夾（剛剛產生的）
+   - `public/` 資料夾（圖片）
 
 4. 移除其他檔案（如 `src/`, `node_modules/`, `vite.config.js` 等）。
 5. 將剩餘檔案壓縮為 ZIP 上傳至 WordPress 外掛即可啟用。
@@ -89,7 +92,7 @@ API 路徑：
 
 ```
 | Action 名稱                       功能描述
-| ------------------------------ | -------------------- |
+| ------------------------------ | --------------------
 | `add_line`                     | 開啟 LINE 加好友連結
 | `call_service`                 | 撥打電話
 | `send_email`                   | 開啟預設信箱寄信視窗
@@ -105,7 +108,7 @@ API 路徑：
 ## 🧩 元件結構
 
 ```
-| 元件          | 描述
+| 元件           | 描述
 | ------------- | ----------------------
 | `ChatWindow`  | 聊天視窗主元件
 | `ChatHeader`  | 視窗頂部標題與關閉按鈕
