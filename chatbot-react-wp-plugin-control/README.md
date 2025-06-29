@@ -9,6 +9,7 @@
 ![操作](../imgs/preview-feature.gif)
 ![商品顯示](../imgs/chat-bot-ui1.png)
 ![優惠](../imgs/chat-bot-ui3.png)
+
 其他有使用 NEXTJS 和 REACT+ VITE 的專案在此專案都跟資料夾
 
 ## 🔧 開發與打包

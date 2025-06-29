@@ -11,6 +11,7 @@
   **WordPress 外掛版本**，透過 REST API 連接 WordPress 資料庫取得聊天流程。
   此專案已拆分元件及撰寫原生 CSS。
   如需安裝外掛至 WordPress，請閱讀以下 README 其內部說明進行打包與上傳。
+
   🔗 詳細說明：[README](./chatbot-react-wp-plugin-control/README.md)
 
 - `chatbot-react-vite-css-only-frontend/`  
