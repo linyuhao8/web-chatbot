@@ -17,7 +17,7 @@ if (!function_exists('chatbot_register_settings')) {
             '聊天機器人設定',           // 標題
             function () {
                 echo '<p><strong>請設定聊天流程的 JSON 結構。</strong></p>';
-                echo '<p>若機器人出現故障，請先檢查 <a href="https://dev-petopia25.pantheonsite.io/wp-json/chatbot/v1/settings" target="_blank">JSON 輸出網址</a> 是否正常。</p>';
+                echo '<p>若機器人出現故障，請先檢查 <a href="/wp-json/chatbot/v1/settings" target="_blank">JSON 輸出網址</a> 是否正常。</p>';
                 echo '<p>若顯示為空白，代表 JSON 結構錯誤，可使用 <a href="https://jsoncrack.com/editor" target="_blank">JSONCrack 編輯器</a> 協助修復。</p>';
                 echo '<p>也可以重新複製 <a href="' . plugin_dir_url(__FILE__) . '../includes/api/default-chatflow.json" target="_blank">預設格式</a> 重新貼上。</p>';
             },
