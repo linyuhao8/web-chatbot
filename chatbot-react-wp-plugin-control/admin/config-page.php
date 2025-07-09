@@ -10,7 +10,7 @@ add_action('admin_init', 'chatbot_register_settings', 10);
 // 註冊設定欄位和群組
 if (!function_exists('chatbot_register_settings')) {
     function chatbot_register_settings() {
-        register_setting('chatbot_options_group', 'chatbot_flows_json' , 'chatbot_validation_json');
+        register_setting('chatbot_options_group', 'chatbot_flows_json' , 'chatbot_validate_json');
   
         add_settings_section(
             'chatbot_settings_section', // section ID
@@ -19,7 +19,8 @@ if (!function_exists('chatbot_register_settings')) {
                 echo '<p><strong>請設定聊天流程的 JSON 結構。</strong></p>';
                 echo '<p>若機器人出現故障，請先檢查 <a href="/wp-json/chatbot/v1/settings" target="_blank">JSON 輸出網址</a> 是否正常。</p>';
                 echo '<p>若顯示為空白，代表 JSON 結構錯誤，可使用 <a href="https://jsoncrack.com/editor" target="_blank">JSONCrack 編輯器</a> 協助修復。</p>';
-                echo '<p>也可以重新複製 <a href="' . plugin_dir_url(__FILE__) . '../includes/api/default-chatflow.json" target="_blank">預設格式</a> 重新貼上。</p>';
+                echo '<a href="' . esc_url(plugin_dir_url(__FILE__) . '../includes/api/default-chatflow.json') . '" target="_blank">預設格式</a>';
+
             },
             'chatbot-config-page'       // ✅ 頁面 ID 要與 form 裡一致
         );
@@ -58,7 +59,7 @@ function chatbot_validate_json($input) {
 
  function chatbot_flows_json_callback() {
     $value = get_option('chatbot_flows_json');
-    echo '<textarea name="chatbot_flows_json" rows="20" style="width:100%;">' . esc_textarea($value) . '</textarea>';
+    echo '<textarea name="chatbot_flows_json" id="chatbot_flows_json" rows="20" style="width:100%;">' . esc_textarea($value) . '</textarea>';
   
     // 顯示範例區塊
     $path = dirname(__DIR__) . '/includes/api/default-chatflow.json';
@@ -86,6 +87,7 @@ if (!function_exists('chatbot_config_page_callback')) {
             <h1>聊天機器人設定</h1>
             <form method="post" action="options.php">
                 <?php
+                settings_errors(); // ← 顯示錯誤訊息
                 settings_fields('chatbot_options_group');
                 do_settings_sections('chatbot-config-page');
                 submit_button('儲存設定');
