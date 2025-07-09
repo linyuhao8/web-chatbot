@@ -23,3 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 **/build
+/chatbot-react-wp-plugin-control/build
+chatbot-react-wp-plugin-control/build/widget.js
