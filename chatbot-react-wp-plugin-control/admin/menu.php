@@ -8,8 +8,8 @@ require_once plugin_dir_path(__FILE__) . 'config-page.php';
 
 function chatbot_add_admin_menu() {
     add_menu_page(
-        'FAQ 小工具',
-        'FAQ Widget',
+        '聊天機器人設定',           // 頁面標題
+        'Chatbot 設定',   
         'manage_options',
         'chatbot-config-page',
         'chatbot_config_page_callback',
