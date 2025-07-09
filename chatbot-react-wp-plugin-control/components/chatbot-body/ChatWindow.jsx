@@ -428,14 +428,23 @@ const ChatWindow = ({ isOpen, setIsOpen }) => {
   const [isTyping, setIsTyping] = useState(false);
   const [userInput, setUserInput] = useState("");
   const messagesEndRef = useRef(null);
-  const [siteUrl, _setSiteUrl] = useState(
-    "https://dev-petopia25.pantheonsite.io"
-  );
+
+  const [siteUrl, _setSiteUrl] = useState(() => window.WP_DATA?.siteUrl ?? "");
+  const restUrl = window.WP_DATA?.restUrl ?? "";
+  const nonce = window.WP_DATA?.nonce ?? "";
 
   useEffect(() => {
-    const fetchdata = async () => {
+    if (!restUrl) return;
+
+    const fetchData = async () => {
       try {
-        const res = await fetch(`${siteUrl}/wp-json/chatbot/v1/settings`);
+        console.log("restUrl", restUrl);
+        const res = await fetch(`${restUrl}chatbot/v1/settings`, {
+          headers: {
+            "Content-Type": "application/json",
+            "X-WP-Nonce": nonce,
+          },
+        });
         const json = await res.json();
         console.log(json);
         setChatFlows(json);
@@ -444,8 +453,8 @@ const ChatWindow = ({ isOpen, setIsOpen }) => {
       }
     };
 
-    fetchdata();
-  }, [siteUrl]); // 如果 siteUrl 不會變，可以用 []
+    fetchData();
+  }, [restUrl, nonce]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
