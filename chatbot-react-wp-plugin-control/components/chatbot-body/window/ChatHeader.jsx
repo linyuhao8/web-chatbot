@@ -7,8 +7,9 @@ const ChatHeader = ({ setIsOpen, siteUrl }) => {
       <div className="chat-header">
         <div className="chat-header-left">
           {/* <div className="chat-avatar">🐾</div> */}
+          {/* you can change you headshot */}
           <img
-            src={`${siteUrl}/wp-content/uploads/2025/06/dog-headshot.png`}
+            src={`${siteUrl}/wp-content/uploads/2025/07/dog-headshot.png`}
             className="chat-avatar"
           />
           <div>
